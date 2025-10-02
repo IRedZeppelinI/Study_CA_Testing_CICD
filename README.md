@@ -1,0 +1,1 @@
+Este é um projecto de estudo e também guia de referencia sobre CICD com AzureDevOps
