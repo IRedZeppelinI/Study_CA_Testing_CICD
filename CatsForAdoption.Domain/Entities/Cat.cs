@@ -8,17 +8,16 @@ public class Cat
     public string Breed { get; set; } = string.Empty;    
     public bool Adopted { get; set; }
     public DateOnly BirthDate { get; set; }
-    public int Age 
+    public int Age => CalculateAge(DateOnly.FromDateTime(DateTime.Now));
+    
+
+    public int CalculateAge(DateOnly today)
     {
-        get 
+        var age = today.Year - BirthDate.Year;
+        if (BirthDate > today.AddYears(-age))
         {
-            var today = DateOnly.FromDateTime(DateTime.Now);
-            var age = today.Year - BirthDate.Year;
-            if (BirthDate > today.AddYears(-age))
-            {
-                age--;
-            }
-            return age;
-        }        
+            age--;
+        }
+        return age;
     }
 }
