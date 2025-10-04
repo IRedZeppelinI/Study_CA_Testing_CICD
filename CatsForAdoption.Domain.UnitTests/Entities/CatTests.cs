@@ -1,4 +1,5 @@
 ﻿using CatsForAdoption.Domain.Entities;
+using System.Xml.Linq;
 
 namespace CatsForAdoption.Domain.UnitTests.Entities;
 
@@ -24,15 +25,18 @@ public class CatTests
         var controlledDateForTests = new DateOnly(2025, 10, 3);
 
         // Criamos a pessoa com a data de nascimento deste cenário.
-        var cat = new Cat
-        {
-            BirthDate = new DateOnly(birthYear, birthMonth, birthDay)
-        };
+        
+        var cat = new Cat(
+            name: "Teste",
+            breed: "testeBreed",
+            birthDate: new DateOnly(birthYear, birthMonth, birthDay),
+            adoptionCenterId: 2);        
+            
 
         // --- ACT ---
 
-        // Executamos a lógica, passando a nossa data controlada.
-        var calculatedAge = cat.CalculateAge(controlledDateForTests);
+        // Executamos a lógica, passando a nossa data controlada.        
+        var calculatedAge = cat.GetAgeAsOf(controlledDateForTests);
 
         // --- ASSERT ---
 
@@ -40,5 +44,21 @@ public class CatTests
         // Na Execução 1, isto será: Assert.Equal(25, calculatedAge);
         // Na Execução 3, isto será: Assert.Equal(24, calculatedAge);
         Assert.Equal(expectedAge, calculatedAge);
+    }
+
+    [Fact]
+    [Trait("Category", "Unit")]
+    public void CatIsAdoptedStartsAsFalse_AndWhenAdopted_IsAdoptedTurnsTrue()
+    {
+        var cat = new Cat(
+            name: "Teste",
+            breed: "testeBreed",
+            birthDate: new DateOnly(2020, 10, 05),
+            adoptionCenterId: 2);
+
+
+        Assert.False(cat.IsAdopted);
+        cat.MarkAsAdopted();
+        Assert.True(cat.IsAdopted);
     }
 }
