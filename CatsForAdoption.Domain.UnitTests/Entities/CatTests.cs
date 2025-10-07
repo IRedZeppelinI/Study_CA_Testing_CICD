@@ -61,4 +61,25 @@ public class CatTests
         cat.MarkAsAdopted();
         Assert.True(cat.IsAdopted);
     }
+
+    [Fact]
+    [Trait("Category", "Unit")]
+    public void CatWithNullNameOrEmptyString_Has_Unnamed_AsName()
+    {
+        var cat = new Cat(
+            name: null,
+            breed: "testeBreed",
+            birthDate: new DateOnly(2020, 10, 05),
+            adoptionCenterId: 2);
+        var cat2 = new Cat(
+            name: "",
+            breed: "testeBreed",
+            birthDate: new DateOnly(2020, 10, 05),
+            adoptionCenterId: 2);
+
+
+        Assert.Equal("Unnamed", cat.Name);
+        Assert.Equal("Unnamed", cat2.Name);
+        
+    }
 }

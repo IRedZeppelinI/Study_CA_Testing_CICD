@@ -20,6 +20,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatsForAdoption.Domain.Unit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatsForAdoption.Infrastructure.IntegrationTests", "CatsForAdoption.Infrastructure.IntegrationTests\CatsForAdoption.Infrastructure.IntegrationTests.csproj", "{D41D0973-3982-410B-9745-08C04A4C8C7E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatsForAdoption.Application.UnitTests", "CatsForAdoption.Application.UnitTests\CatsForAdoption.Application.UnitTests.csproj", "{C505729B-0DC0-4312-8D47-02414D992F71}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -102,6 +104,18 @@ Global
 		{D41D0973-3982-410B-9745-08C04A4C8C7E}.Release|x64.Build.0 = Release|Any CPU
 		{D41D0973-3982-410B-9745-08C04A4C8C7E}.Release|x86.ActiveCfg = Release|Any CPU
 		{D41D0973-3982-410B-9745-08C04A4C8C7E}.Release|x86.Build.0 = Release|Any CPU
+		{C505729B-0DC0-4312-8D47-02414D992F71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C505729B-0DC0-4312-8D47-02414D992F71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C505729B-0DC0-4312-8D47-02414D992F71}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C505729B-0DC0-4312-8D47-02414D992F71}.Debug|x64.Build.0 = Debug|Any CPU
+		{C505729B-0DC0-4312-8D47-02414D992F71}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C505729B-0DC0-4312-8D47-02414D992F71}.Debug|x86.Build.0 = Debug|Any CPU
+		{C505729B-0DC0-4312-8D47-02414D992F71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C505729B-0DC0-4312-8D47-02414D992F71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C505729B-0DC0-4312-8D47-02414D992F71}.Release|x64.ActiveCfg = Release|Any CPU
+		{C505729B-0DC0-4312-8D47-02414D992F71}.Release|x64.Build.0 = Release|Any CPU
+		{C505729B-0DC0-4312-8D47-02414D992F71}.Release|x86.ActiveCfg = Release|Any CPU
+		{C505729B-0DC0-4312-8D47-02414D992F71}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
