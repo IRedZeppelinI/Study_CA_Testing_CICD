@@ -22,6 +22,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatsForAdoption.Infrastruct
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatsForAdoption.Application.UnitTests", "CatsForAdoption.Application.UnitTests\CatsForAdoption.Application.UnitTests.csproj", "{C505729B-0DC0-4312-8D47-02414D992F71}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatsForAdoption.Api.FunctionalTests", "CatsForAdoption.Api.FunctionalTests\CatsForAdoption.Api.FunctionalTests.csproj", "{728EFD49-BAAF-4105-9022-05BE69065384}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -116,6 +118,18 @@ Global
 		{C505729B-0DC0-4312-8D47-02414D992F71}.Release|x64.Build.0 = Release|Any CPU
 		{C505729B-0DC0-4312-8D47-02414D992F71}.Release|x86.ActiveCfg = Release|Any CPU
 		{C505729B-0DC0-4312-8D47-02414D992F71}.Release|x86.Build.0 = Release|Any CPU
+		{728EFD49-BAAF-4105-9022-05BE69065384}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{728EFD49-BAAF-4105-9022-05BE69065384}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{728EFD49-BAAF-4105-9022-05BE69065384}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{728EFD49-BAAF-4105-9022-05BE69065384}.Debug|x64.Build.0 = Debug|Any CPU
+		{728EFD49-BAAF-4105-9022-05BE69065384}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{728EFD49-BAAF-4105-9022-05BE69065384}.Debug|x86.Build.0 = Debug|Any CPU
+		{728EFD49-BAAF-4105-9022-05BE69065384}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{728EFD49-BAAF-4105-9022-05BE69065384}.Release|Any CPU.Build.0 = Release|Any CPU
+		{728EFD49-BAAF-4105-9022-05BE69065384}.Release|x64.ActiveCfg = Release|Any CPU
+		{728EFD49-BAAF-4105-9022-05BE69065384}.Release|x64.Build.0 = Release|Any CPU
+		{728EFD49-BAAF-4105-9022-05BE69065384}.Release|x86.ActiveCfg = Release|Any CPU
+		{728EFD49-BAAF-4105-9022-05BE69065384}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

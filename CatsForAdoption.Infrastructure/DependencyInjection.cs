@@ -1,4 +1,6 @@
-﻿using CatsForAdoption.Infrastructure.Persistence;
+﻿using CatsForAdoption.Application.Interfaces;
+using CatsForAdoption.Infrastructure.Persistence;
+using CatsForAdoption.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -14,7 +16,7 @@ public static class DependencyInjection
         services.AddDbContext<AppDbContext>(options =>
             options.UseSqlServer(connectionStrring));
 
-
+        services.AddScoped<ICatRepository, CatRepository>();
 
         return services;
     } 
