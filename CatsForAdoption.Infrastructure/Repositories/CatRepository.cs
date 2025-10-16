@@ -7,9 +7,9 @@ namespace CatsForAdoption.Infrastructure.Repositories;
 
 public class CatRepository : ICatRepository
 {
-    private readonly AppDbContext _context;
+    private readonly AppDbContextBase _context;
 
-    public CatRepository(AppDbContext context)
+    public CatRepository(AppDbContextBase context)
     {
         _context = context;
     }

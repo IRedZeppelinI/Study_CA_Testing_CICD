@@ -1,12 +1,13 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
+using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #nullable disable
 
-namespace CatsForAdoption.Infrastructure.Migrations
+namespace CatsForAdoption.Infrastructure.Migrations.PostgreSql
 {
     /// <inheritdoc />
-    public partial class Version01 : Migration
+    public partial class Initial_PostgreSql : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -15,10 +16,10 @@ namespace CatsForAdoption.Infrastructure.Migrations
                 name: "AdoptionCenters",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    City = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: false),
-                    Address = table.Column<string>(type: "nvarchar(250)", maxLength: 250, nullable: false)
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    City = table.Column<string>(type: "character varying(150)", maxLength: 150, nullable: false),
+                    Address = table.Column<string>(type: "character varying(250)", maxLength: 250, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -29,14 +30,14 @@ namespace CatsForAdoption.Infrastructure.Migrations
                 name: "Cats",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false, defaultValue: "Unnamed"),
-                    Description = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: true),
-                    Breed = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
-                    IsAdopted = table.Column<bool>(type: "bit", nullable: false, defaultValue: false),
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    Name = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false, defaultValue: "Unnamed"),
+                    Description = table.Column<string>(type: "character varying(500)", maxLength: 500, nullable: true),
+                    Breed = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
+                    IsAdopted = table.Column<bool>(type: "boolean", nullable: false, defaultValue: false),
                     BirthDate = table.Column<DateOnly>(type: "date", nullable: false),
-                    AdoptionCenterId = table.Column<int>(type: "int", nullable: false)
+                    AdoptionCenterId = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
                 {

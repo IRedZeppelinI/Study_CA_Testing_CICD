@@ -16,7 +16,7 @@ public class CatConfiguration : IEntityTypeConfiguration<Cat>
 
         // Configuração das propriedades
         builder.Property(cat => cat.Name)
-            .IsRequired()            
+            .IsRequired()
             .HasMaxLength(100)
             .HasDefaultValue("Unnamed");
 

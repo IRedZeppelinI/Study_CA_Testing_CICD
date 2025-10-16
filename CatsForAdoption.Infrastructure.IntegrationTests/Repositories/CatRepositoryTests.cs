@@ -7,7 +7,7 @@ namespace CatsForAdoption.Infrastructure.IntegrationTests.Repositories;
 [Collection("DatabaseTests")]
 public class CatRepositoryTests : IDisposable
 {
-    private readonly AppDbContext _context;
+    private readonly AppDbContextBase _context;
 
     public CatRepositoryTests()
     {

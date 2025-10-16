@@ -4,7 +4,7 @@ namespace CatsForAdoption.Infrastructure.Persistence;
 
 public static class DataSeeder
 {
-    public static async Task SeedAsync(AppDbContext context)
+    public static async Task SeedAsync(AppDbContextBase context)
     {
         if (context.AdoptionCenters.Any())
         {

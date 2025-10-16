@@ -24,10 +24,11 @@ public class CatsEndpointsTests : IClassFixture<CustomWebApplicationFactory>, ID
     private async Task ResetDatabaseAsync()
     {        
         using var scope = _factory.Services.CreateScope();
-        var context = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+        var context = scope.ServiceProvider.GetRequiredService<AppDbContextBase>();
         
         await context.Database.EnsureDeletedAsync();
-        await context.Database.MigrateAsync();
+        //await context.Database.MigrateAsync();
+        await context.Database.EnsureCreatedAsync(); // Mudar de MigrateAsync para EnsureCreatedAsync
     }
 
     [Fact]
@@ -37,7 +38,7 @@ public class CatsEndpointsTests : IClassFixture<CustomWebApplicationFactory>, ID
         await ResetDatabaseAsync();
 
         using var scope = _factory.Services.CreateScope();
-        var context = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+        var context = scope.ServiceProvider.GetRequiredService<AppDbContextBase>();
 
 
         var adoptionCenter = new AdoptionCenter("Leiria", "Rua dos Gatos Felizes, 123");

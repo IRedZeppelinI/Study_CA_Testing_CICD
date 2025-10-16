@@ -23,7 +23,7 @@ if (app.Environment.IsDevelopment())
         var services = scope.ServiceProvider;
         try
         {
-            var context = services.GetRequiredService<AppDbContext>();
+            var context = services.GetRequiredService<AppDbContextBase>();
             await DataSeeder.SeedAsync(context);
         }
         catch (Exception ex)

@@ -4,10 +4,10 @@ using System.Reflection;
 
 namespace CatsForAdoption.Infrastructure.Persistence;
 
-public class AppDbContext : DbContext
+public abstract class AppDbContextBase : DbContext
 {
 
-    public AppDbContext(DbContextOptions<AppDbContext> dbContextOptions) : base(dbContextOptions)
+    protected AppDbContextBase(DbContextOptions dbContextOptions) : base(dbContextOptions)
     {
         
     }
